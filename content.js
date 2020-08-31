@@ -19,6 +19,7 @@ const interval = setInterval(() => {
     header.appendChild(button);
   }
 
+  // prevents tab to close unintentionally
   window.onbeforeunload = function () {
     return 'Quit window?';
   };
