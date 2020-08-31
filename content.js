@@ -3,7 +3,6 @@
 const interval = setInterval(() => {
   const header = document.querySelector('._1QUKR');
   if (header) {
-    console.log(header);
     clearInterval(interval);
 
     const button = document.createElement('button');
@@ -12,13 +11,15 @@ const interval = setInterval(() => {
 
     button.addEventListener('click', () => {
       const audios = document.querySelectorAll('audio');
-      console.log(audios);
       audios.forEach((audio) => {
-        console.log(audio);
         audio.playbackRate = 2;
       });
     });
 
     header.appendChild(button);
   }
+
+  window.onbeforeunload = function () {
+    return 'Quit window?';
+  };
 }, 1000);
