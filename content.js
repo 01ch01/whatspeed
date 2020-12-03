@@ -2,6 +2,7 @@
 
 const interval = setInterval(() => {
   const header = document.querySelector('._1QUKR');
+
   if (header) {
     clearInterval(interval);
 
@@ -11,7 +12,8 @@ const interval = setInterval(() => {
 
     button.addEventListener('click', () => {
       const audios = document.querySelectorAll('audio');
-      audios.forEach((audio) => {
+
+      audios.forEach(audio => {
         audio.playbackRate = 2;
       });
     });
